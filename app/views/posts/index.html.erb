@@ -6,7 +6,8 @@
 <table>
   <thead>
     <tr>
-      <th>User</th>
+      <th>User Id</th>
+      <th>Post Id</th>
       <th>Title</th>
       <th>Content</th>
       <th>Status</th>
@@ -17,7 +18,8 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.user.email %></td>
+        <td><%= post.user.id %></td>
+        <td><%= post.id %></td>
         <td><%= post.title %></td>
         <td><%= post.content %></td>
         <td><%= post.post_tag %></td>

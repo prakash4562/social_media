@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = Post.where(["user_id = :id or post_tag = :tag", { id: current_user.id, tag: 'Public'}])
+    # render json: { success: true, data: @posts, status: 200, message: 'Data received successfully.'}
   end
 
   # GET /posts/1 or /posts/1.json
